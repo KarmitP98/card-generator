@@ -1,0 +1,20 @@
+.card-image-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1rem 0;
+
+  &.space {
+
+	.card-image{
+	  border-radius: 0.5rem;
+	  overflow: hidden;
+	  width: calc(100% - 2rem);
+	}
+  }
+
+  .card-image {
+	width: 100%;
+	object-fit: cover;
+  }
+}

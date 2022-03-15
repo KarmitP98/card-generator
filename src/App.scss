@@ -6,7 +6,7 @@
 
 .card{
   border: 1px solid;
-  width: fit-content;
+  width: clamp(100px, 300px, 500px);
   height: fit-content;
 }
 
