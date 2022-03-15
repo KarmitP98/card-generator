@@ -4,6 +4,8 @@ import {DropResult} from 'react-beautiful-dnd';
 import Header from './components/Header/Header';
 import CardImage, {ImageStyle} from './components/Image/CardImage';
 import Action, {ActionAlignment} from './components/Action/Action';
+import Content from './components/Content/Content';
+import {LOREM_1_PARA} from './shared/constants';
 
 function App() {
 	
@@ -22,10 +24,14 @@ function App() {
 	return (
 		<div className='App'>
 			<div className='card'>
-				<Header title={'Header Title'} avatar={' https://source.unsplash.com/random'}
-				        subtitle={'Subtitle Goes Here'}
+				<Header
+					title={'Header Title'} avatar={' https://source.unsplash.com/random'}
+					subtitle={'Subtitle Goes Here'}
 				/>
 				<CardImage src={' https://source.unsplash.com/random'} alt={'Card Image'} style={ImageStyle.noSpace}/>
+				<Content>
+					{LOREM_1_PARA}
+				</Content>
 				<Action align={ActionAlignment.between}>
 					<button>Button 1</button>
 					<button>Button 2</button>
