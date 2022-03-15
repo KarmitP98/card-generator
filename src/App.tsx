@@ -3,6 +3,7 @@ import './App.scss';
 import {DropResult} from 'react-beautiful-dnd';
 import Header from './components/Header/Header';
 import CardImage, {ImageStyle} from './components/Image/CardImage';
+import Action, {ActionAlignment} from './components/Action/Action';
 
 function App() {
 	
@@ -24,7 +25,11 @@ function App() {
 				<Header title={'Header Title'} avatar={' https://source.unsplash.com/random'}
 				        subtitle={'Subtitle Goes Here'}
 				/>
-				<CardImage src={' https://source.unsplash.com/random'} alt={'Card Image'} style={ImageStyle.space}/>
+				<CardImage src={' https://source.unsplash.com/random'} alt={'Card Image'} style={ImageStyle.noSpace}/>
+				<Action align={ActionAlignment.between}>
+					<button>Button 1</button>
+					<button>Button 2</button>
+				</Action>
 			</div>
 			{/*<DragDropContext onDragEnd={onDragEnd}>*/}
 			{/*	<Droppable droppableId={'drop-1'} direction={'vertical'}>*/}
