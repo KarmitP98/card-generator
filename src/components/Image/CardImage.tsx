@@ -9,8 +9,7 @@ interface Props {
 
 export enum ImageStyle {
 	noSpace = 'no-space',
-	space = 'space',
-	fullWidth = 'full-width'
+	space = 'space'
 }
 
 const CardImage = ({src, alt, style = ImageStyle.noSpace}: Props) => {
