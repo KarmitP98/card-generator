@@ -14,17 +14,10 @@ export enum ActionAlignment {
 	between = 'space-between'
 }
 
-const Action = ({children, align}: Props) => {
-	
-	const style = {
-		justifyContent: align
-	};
-	
-	return (
-		<div className={`action`} style={style}>
-			{children}
-		</div>
-	);
-};
+const Action = ({children, align}: Props) => (
+	<div className={`action`} style={{justifyContent: align}}>
+		{children}
+	</div>
+);
 
 export default Action;
