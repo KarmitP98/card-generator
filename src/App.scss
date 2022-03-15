@@ -1,0 +1,27 @@
+.App {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card{
+  border: 1px solid;
+  width: fit-content;
+  height: fit-content;
+}
+
+.drop{
+  border: 1px solid;
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+
+  .drag{
+    border: 1px solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+}
