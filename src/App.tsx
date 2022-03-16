@@ -26,7 +26,20 @@ function App() {
 	return (
 		<div className='App'>
 			{/*<Card action=}}></Card>*/}
-			
+			<div className='card'>
+				<CardImage src={' https://source.unsplash.com/random'} alt={'Card Image'} style={ImageStyle.space}/>
+				<Header
+					title={'Header Title'} avatar={' https://source.unsplash.com/random'}
+					subtitle={'Subtitle Goes Here'}
+				/>
+				<Content>
+					{LOREM_1_PARA}
+				</Content>
+				<Action align={ActionAlignment.end}>
+					<Button variant={'outline'} theme={'danger'}>Cancel</Button>
+					<Button variant={'flat'} theme={'primary'}>Save</Button>
+				</Action>
+			</div>
 			
 			{/*<DragDropContext onDragEnd={onDragEnd}>*/}
 			{/*	<Droppable droppableId={'drop-1'} direction={'vertical'}>*/}

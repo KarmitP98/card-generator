@@ -6,7 +6,7 @@ export default {
 	component: CardImage
 } as ComponentMeta<typeof CardImage>;
 
-const template: ComponentStory<typeof CardImage> = args => <div style={{maxWidth: '400px'}}><CardImage {...args}/></div>;
+const template: ComponentStory<typeof CardImage> = args => <CardImage {...args}/>;
 
 export const Full_Size = template.bind({});
 Full_Size.args = {
