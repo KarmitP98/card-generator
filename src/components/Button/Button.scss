@@ -61,10 +61,13 @@ $success-tint: #42d77d;
 }
 
 @function getFontColor($color: primary) {
-  @if (#{$color} == secondary) {
+  @if ($color == primary) {
 	@return white;
   }
-  @if (#{$color} == danger) {
+  @if ($color == secondary) {
+	@return white;
+  }
+  @if ($color == danger) {
 	@return white;
   }
   @return black;
@@ -73,11 +76,14 @@ $success-tint: #42d77d;
 @mixin flat-button($color) {
   background-color: getColor($color);
   color: getFontColor($color);
+  border: 2px solid getColor($color);
   &:hover {
 	background-color: getHoverColor($color);
+	border: 2px solid getHoverColor($color);
   }
   &:active {
 	background-color: getTintColor($color);
+	border: 2px solid getTintColor($color);
   }
 }
 

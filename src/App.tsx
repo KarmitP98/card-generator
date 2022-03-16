@@ -33,10 +33,9 @@ function App() {
 				<Content>
 					{LOREM_1_PARA}
 				</Content>
-				<Action align={ActionAlignment.between}>
-					<Button size={'sm'} theme={'danger'}>Button 1</Button>
-					<Button size={'m'} variant={'flat'} theme={'warn'}>Button 2</Button>
-					<Button size={'lg'} variant={'outline'}>Button 3</Button>
+				<Action align={ActionAlignment.end}>
+					<Button variant={'outline'} theme={'danger'}>Cancel</Button>
+					<Button variant={'flat'} theme={'primary'}>Save</Button>
 				</Action>
 			</div>
 			{/*<DragDropContext onDragEnd={onDragEnd}>*/}
