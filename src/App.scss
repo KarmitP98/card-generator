@@ -1,27 +1,29 @@
 .App {
   display: grid;
-  place-items: center;
   height: 100vh;
+  place-items: center;
 }
 
-.card{
-  border: 1px solid;
+.card {
   width: clamp(100px, 400px, 500px);
   height: fit-content;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(52, 52, 52, 0.15);
 }
 
-.drop{
-  border: 1px solid;
-  padding: 2rem;
-  margin: 2rem;
+.drop {
   display: flex;
   flex-flow: column;
+  margin: 2rem;
+  padding: 2rem;
+  border: 1px solid;
   gap: 1rem;
 
-  .drag{
-    border: 1px solid;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+  .drag {
+	padding: 0.5rem 1rem;
+	border: 1px solid;
+	border-radius: 0.5rem;
   }
 
 }
