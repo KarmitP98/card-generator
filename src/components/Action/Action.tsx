@@ -1,9 +1,9 @@
 import React from 'react';
 import './Action.scss';
 
-interface Props {
+export interface Props {
 	align: ActionAlignment,
-	children: any
+	[x:string]: any
 }
 
 export enum ActionAlignment {

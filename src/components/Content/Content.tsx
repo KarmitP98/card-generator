@@ -1,7 +1,7 @@
 import React from 'react';
 import './Content.scss';
 
-interface Props {
+export interface Props {
 	children?: any;
 }
 

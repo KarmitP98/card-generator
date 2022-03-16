@@ -1,7 +1,7 @@
 import React from 'react';
 import './CardImage.scss';
 
-interface Props {
+export interface Props {
 	src: string;
 	alt: string;
 	style: ImageStyle;

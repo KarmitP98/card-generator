@@ -3,7 +3,7 @@ import './Header.scss';
 
 const Header = ({title, subtitle, avatar}: Props) => {
 	return (
-		<div className={`header ${subtitle ? 'with-subtitle' : ''}`}>
+		<div className={`header ${subtitle ? 'with-subtitle' : ''} ${title ? 'with-title':''}`}>
 			{avatar && <img src={avatar} alt='Avatar' className={'avatar'}/>}
 			<div className='content'>
 				<div className='title'>{title}</div>
@@ -13,7 +13,7 @@ const Header = ({title, subtitle, avatar}: Props) => {
 	);
 };
 
-interface Props {
+export interface Props {
 	title: string,
 	subtitle?: string,
 	avatar?: string

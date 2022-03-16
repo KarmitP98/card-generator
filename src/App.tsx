@@ -7,6 +7,7 @@ import Action, {ActionAlignment} from './components/Action/Action';
 import Content from './components/Content/Content';
 import {LOREM_1_PARA} from './shared/constants';
 import Button from './components/Button/Button';
+import Card from './components/Card/Card';
 
 function App() {
 	
@@ -24,20 +25,7 @@ function App() {
 	
 	return (
 		<div className='App'>
-			<div className='card'>
-				<CardImage src={' https://source.unsplash.com/random'} alt={'Card Image'} style={ImageStyle.noSpace}/>
-				<Header
-					title={'Header Title'} avatar={' https://source.unsplash.com/random'}
-					subtitle={'Subtitle Goes Here'}
-				/>
-				<Content>
-					{LOREM_1_PARA}
-				</Content>
-				<Action align={ActionAlignment.end}>
-					<Button variant={'outline'} theme={'danger'}>Cancel</Button>
-					<Button variant={'flat'} theme={'primary'}>Save</Button>
-				</Action>
-			</div>
+			{/*<Card action=}}></Card>*/}
 			
 			
 			{/*<DragDropContext onDragEnd={onDragEnd}>*/}

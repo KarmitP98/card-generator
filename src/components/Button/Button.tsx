@@ -5,10 +5,11 @@ export type ThemePalette = 'primary' | 'secondary' | 'warn' | 'danger' | 'succes
 export type ButtonSize = 'sm' | 'm' | 'lg';
 export type ButtonVariant = 'default' | 'outline' | 'flat';
 
-interface Props {
+export interface Props {
 	theme?: ThemePalette;
 	size?: ButtonSize;
 	variant?: ButtonVariant;
+	children?: any;
 	[x: string]: any;
 	
 }
