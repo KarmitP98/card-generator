@@ -1,0 +1,214 @@
+$primary: #3880ff;
+$primary-hover: #3171e0;
+$primary-tint: #4c8dff;
+
+$secondary: #5260ff;
+$secondary-hover: #4854e0;
+$secondary-tint: #6370ff;
+
+$warn: #ffc409;
+$warn-hover: #e0ac08;
+$warn-tint: #ffca22;
+
+$danger: #eb445a;
+$danger-hover: #cf3c4f;
+$danger-tint: #ed576b;
+
+$success: #2dd36f;
+$success-hover: #28ba62;
+$success-tint: #42d77d;
+
+@function getHoverColor($color: primary) {
+  @if ($color == primary) {
+	@return $primary-hover;
+  } @else if ($color == secondary) {
+	@return $secondary-hover;
+  } @else if ($color == warn) {
+	@return $warn-hover;
+  } @else if ($color == danger) {
+	@return $danger-hover;
+  } @else if ($color == success) {
+	@return $success-hover;
+  }
+}
+
+@function getTintColor($color:primary) {
+  @if ($color == primary) {
+	@return $primary-tint;
+  } @else if ($color == secondary) {
+	@return $secondary-tint;
+  } @else if ($color == warn) {
+	@return $warn-tint;
+  } @else if ($color == danger) {
+	@return $danger-tint;
+  } @else if ($color == success) {
+	@return $success-tint;
+  }
+}
+
+@function getColor($color: primary) {
+  @if ($color == primary) {
+	@return $primary;
+  } @else if ($color == secondary) {
+	@return $secondary;
+  } @else if ($color == warn) {
+	@return $warn;
+  } @else if ($color == danger) {
+	@return $danger;
+  } @else if ($color == success) {
+	@return $success;
+  }
+}
+
+@function getFontColor($color: primary) {
+  @if (#{$color} == secondary) {
+	@return white;
+  }
+  @if (#{$color} == danger) {
+	@return white;
+  }
+  @return black;
+}
+
+@mixin flat-button($color) {
+  background-color: getColor($color);
+  color: getFontColor($color);
+  &:hover {
+	background-color: getHoverColor($color);
+  }
+  &:active {
+	background-color: getTintColor($color);
+  }
+}
+
+@mixin default-button($color) {
+  color: getColor($color);
+  &:hover {
+	color: getHoverColor($color);
+  }
+  &:active {
+	background-color: rgba(red(getColor($color)), green(getColor($color)), blue(getColor($color)), 0.1);
+  }
+}
+
+
+@mixin outline-button($color) {
+  @include default-button($color);
+  border: 2px solid getColor($color);
+  &:hover {
+	border: 2px solid getHoverColor($color);
+  }
+  &:active {
+	border: 2px solid getTintColor($color)
+  }
+}
+
+.button {
+  cursor: pointer;
+  transition: all 0.125s ease-in-out;
+  letter-spacing: 1px;
+
+  &.sm {
+	font-size: 0.75rem;
+	font-weight: 600;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.25rem;
+  }
+
+  &.m {
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+  }
+
+  &.lg {
+	font-size: 1.2rem;
+	font-weight: 600;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.75rem;
+  }
+
+  &.default {
+	border: none;
+	outline: none;
+	background: transparent;
+
+	&.primary {
+	  @include default-button(primary)
+	}
+
+	&.secondary {
+	  @include default-button(secondary)
+	}
+
+	&.warn {
+	  @include default-button(warn)
+	}
+
+	&.danger {
+	  @include default-button(danger)
+	}
+
+	&.success {
+	  @include default-button(success)
+	}
+  }
+
+  &.flat {
+	border: none;
+	outline: none;
+	background: transparent;
+
+	&.primary {
+	  @include flat-button(primary)
+	}
+
+	&.secondary {
+	  @include flat-button(secondary)
+	}
+
+	&.warn {
+	  @include flat-button(warn)
+	}
+
+	&.danger {
+	  @include flat-button(danger)
+	}
+
+	&.success {
+	  @include flat-button(success)
+	}
+  }
+
+  &.outline {
+	outline: none;
+	background: transparent;
+
+	&.primary {
+	  @include outline-button(primary)
+	}
+
+	&.secondary {
+	  @include outline-button(secondary)
+	}
+
+	&.warn {
+	  @include outline-button(warn)
+	}
+
+	&.danger {
+	  @include outline-button(danger)
+	}
+
+	&.success {
+	  @include outline-button(success)
+	}
+  }
+
+  &[disabled=true]{
+	cursor: not-allowed;
+	background-color: #636363;
+	color: getFontColor(disabled);
+  }
+}

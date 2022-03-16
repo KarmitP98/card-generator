@@ -6,6 +6,7 @@ import CardImage, {ImageStyle} from './components/Image/CardImage';
 import Action, {ActionAlignment} from './components/Action/Action';
 import Content from './components/Content/Content';
 import {LOREM_1_PARA} from './shared/constants';
+import Button from './components/Button/Button';
 
 function App() {
 	
@@ -33,8 +34,9 @@ function App() {
 					{LOREM_1_PARA}
 				</Content>
 				<Action align={ActionAlignment.between}>
-					<button>Button 1</button>
-					<button>Button 2</button>
+					<Button size={'sm'} theme={'danger'}>Button 1</Button>
+					<Button size={'m'} variant={'flat'} theme={'warn'}>Button 2</Button>
+					<Button size={'lg'} variant={'outline'}>Button 3</Button>
 				</Action>
 			</div>
 			{/*<DragDropContext onDragEnd={onDragEnd}>*/}
