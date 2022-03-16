@@ -25,11 +25,11 @@ function App() {
 	return (
 		<div className='App'>
 			<div className='card'>
+				<CardImage src={' https://source.unsplash.com/random'} alt={'Card Image'} style={ImageStyle.noSpace}/>
 				<Header
 					title={'Header Title'} avatar={' https://source.unsplash.com/random'}
 					subtitle={'Subtitle Goes Here'}
 				/>
-				<CardImage src={' https://source.unsplash.com/random'} alt={'Card Image'} style={ImageStyle.noSpace}/>
 				<Content>
 					{LOREM_1_PARA}
 				</Content>
@@ -38,6 +38,8 @@ function App() {
 					<Button variant={'flat'} theme={'primary'}>Save</Button>
 				</Action>
 			</div>
+			
+			
 			{/*<DragDropContext onDragEnd={onDragEnd}>*/}
 			{/*	<Droppable droppableId={'drop-1'} direction={'vertical'}>*/}
 			{/*		{(provided => (*/}
