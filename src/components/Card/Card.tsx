@@ -14,18 +14,34 @@ interface CardProps {
 	action: ActionProps,
 	button1: ButtonProps,
 	button2: ButtonProps,
+	order: CardOrder
 }
 
-const Card = ({cardImage, content, button1, button2, action, header}: CardProps) => {
+type CardOrder = 'hica' | 'ihca';
+
+const Card = ({cardImage, content, button1, button2, action, header, order}: CardProps) => {
 	return (
-		<div className='card'>
-			<CardImage {...cardImage}/>
-			<Header {...header}/>
-			<Content {...content}/>
-			<Action {...action}>
-				<Button {...button1}>Cancel</Button>
-				<Button {...button2}>Save</Button>
-			</Action>
+		<div className='card'>{
+			order === 'ihca' ?
+				<>
+					<CardImage {...cardImage}/>
+					<Header {...header}/>
+					<Content {...content}/>
+					<Action {...action}>
+						<Button {...button1}>Cancel</Button>
+						<Button {...button2}>Save</Button>
+					</Action>
+				</>
+				:
+				<>
+					<Header {...header}/>
+					<CardImage {...cardImage}/>
+					<Content {...content}/>
+					<Action {...action}>
+						<Button {...button1}>Cancel</Button>
+						<Button {...button2}>Save</Button>
+					</Action>
+				</>}
 		</div>
 	);
 };
