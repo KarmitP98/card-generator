@@ -6,7 +6,7 @@ import Button from '../components/Button/Button';
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
 	title: 'Component/Button',
-	component: Button,
+	component: Button
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 } as ComponentMeta<typeof Button>;
 
@@ -18,7 +18,7 @@ export const Primary = Template.bind({});
 Primary.args = {
 	theme: 'primary',
 	size: 'm',
-	variant:'flat',
+	variant: 'flat',
 	children: 'New Button'
 };
 

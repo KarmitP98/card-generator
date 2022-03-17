@@ -212,9 +212,9 @@ $success-tint: #42d77d;
 	}
   }
 
-  &[disabled=true]{
+  &[disabled=true] {
 	cursor: not-allowed;
-	background-color: #636363;
 	color: getFontColor(disabled);
+	background-color: #636363;
   }
 }

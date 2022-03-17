@@ -1,20 +1,21 @@
 .card-image-container {
-  width: 100%;
   display: grid;
+  width: 100%;
   place-items: center;
 
   &.space {
 	padding: 1rem 0;
-	.card-image{
-	  border-radius: 0.5rem;
+
+	.card-image {
 	  width: calc(100% - 2rem);
+	  border-radius: 0.5rem;
 	}
   }
 
   .card-image {
+	overflow: hidden;
 	width: 100%;
 	max-height: 300px;
 	object-fit: cover;
-	overflow: hidden;
   }
 }

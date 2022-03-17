@@ -3,7 +3,8 @@ import './Action.scss';
 
 export interface Props {
 	align: ActionAlignment,
-	[x:string]: any
+	
+	[x: string]: any
 }
 
 export enum ActionAlignment {

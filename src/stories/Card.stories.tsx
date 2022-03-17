@@ -6,12 +6,12 @@ import {ActionAlignment} from '../components/Action/Action';
 export default {
 	title: 'Component/Card',
 	component: Card,
-	argTypes:{
+	argTypes: {
 		order: {
 			defaultValue: 'hica',
-			control:{
+			control: {
 				type: 'radio',
-				labels:{
+				labels: {
 					ihca: 'Image First',
 					hica: 'Header First'
 				}
@@ -24,22 +24,22 @@ const template: ComponentStory<typeof Card> = args => <Card {...args}/>;
 
 export const NormalCard = template.bind({});
 NormalCard.args = {
-	header: {title: 'Card Title', avatar:'https://source.unsplash.com/random', subtitle:'New Subtitle'},
+	header: {title: 'Card Title', avatar: 'https://source.unsplash.com/random', subtitle: 'New Subtitle'},
 	cardImage: {src: 'https://source.unsplash.com/random', alt: 'Card Image', style: ImageStyle.noSpace},
-	content: {children:'This is a really small content!'},
+	content: {children: 'This is a really small content!'},
 	action: {align: ActionAlignment.end},
-	button1: {variant: 'outline', theme:'danger'},
-	button2: {variant:'flat', theme:'success'},
-	order:'hica'
+	button1: {variant: 'outline', theme: 'danger'},
+	button2: {variant: 'flat', theme: 'success'},
+	order: 'hica'
 };
 
 export const ImageFirst = template.bind({});
 ImageFirst.args = {
 	header: {title: 'Card Title'},
 	cardImage: {src: 'https://source.unsplash.com/random', alt: 'Card Image', style: ImageStyle.noSpace},
-	content: {children:'This is a really small content!'},
+	content: {children: 'This is a really small content!'},
 	action: {align: ActionAlignment.end},
-	button1: {variant: 'outline', theme:'danger'},
-	button2: {variant:'flat', theme:'success'},
-	order:'ihca'
+	button1: {variant: 'outline', theme: 'danger'},
+	button2: {variant: 'flat', theme: 'success'},
+	order: 'ihca'
 };

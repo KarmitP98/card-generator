@@ -5,23 +5,23 @@
   padding: 0;
   gap: 1rem;
 
-  &.with-title{
+  &.with-title {
 	padding: 1rem;
   }
 
-  &.with-subtitle{
-	.avatar{
+  &.with-subtitle {
+	.avatar {
 	  width: 4rem;
 	  height: 4rem;
 	}
   }
 
-  .avatar{
-	aspect-ratio: 1;
+  .avatar {
+	overflow: hidden;
 	width: 3rem;
 	height: 3rem;
 	border-radius: 100%;
-	overflow: hidden;
+	aspect-ratio: 1;
 	object-fit: cover;
   }
 

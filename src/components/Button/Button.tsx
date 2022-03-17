@@ -10,12 +10,13 @@ export interface Props {
 	size?: ButtonSize;
 	variant?: ButtonVariant;
 	children?: any;
+	
 	[x: string]: any;
 	
 }
 
-const Button = (props:Props) => {
-	const {theme = 'primary', size = 'm', variant = 'default', children='Button', ...otherProps} = props;
+const Button = (props: Props) => {
+	const {theme = 'primary', size = 'm', variant = 'default', children = 'Button', ...otherProps} = props;
 	return (
 		<button {...otherProps} className={`button ${size} ${theme} ${variant}`}>
 			{children}
